@@ -463,20 +463,43 @@ nav a.active::after {
 /* ===============================
    RESPONSIVE
 =================================*/
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  .hero-content {
+    min-height: 55vh;
+  }
+
+  .skills-grid {
+    gap: 1.4rem;
+  }
+
+  .project {
+    padding: 1.4rem 1.3rem;
+  }
+}
 
 @media (max-width: 900px) {
   .nav {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     gap: 0.4rem;
     height: auto;
     padding: 0.6rem 0 0.85rem;
   }
 
+  .nav nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
   nav a {
-    margin-left: 0;
-    margin-right: 1rem;
+    margin: 0;
     font-size: 0.88rem;
   }
 
@@ -486,21 +509,52 @@ nav a.active::after {
 
   .hero-content {
     min-height: auto;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-content > div {
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  .hero-text,
+  .hero-subtitle {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .hero h1 {
     font-size: 2.05rem;
   }
+
+  .grid-2 {
+    gap: 1.6rem;
+  }
+
+  .project {
+    padding: 1.35rem 1.25rem;
+  }
 }
 
 @media (max-width: 680px) {
+  .container {
+    padding: 0 1.1rem;
+  }
+
   .section,
   .section-alt {
-    padding: 2.9rem 0;
+    padding: 2.7rem 0;
   }
 
   .section h2 {
     font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .section h2::after {
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .hero h1 {
@@ -512,11 +566,58 @@ nav a.active::after {
     font-size: 0.93rem;
   }
 
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
   .grid-2 {
     flex-direction: column;
   }
 
   .info-card {
     flex: 1 1 auto;
+  }
+
+  .project {
+    margin-bottom: 1.4rem;
+  }
+
+  .project-img {
+    margin: 0.5rem 0;
+  }
+
+  .contact-list li {
+    font-size: 0.9rem;
+  }
+
+  .footer {
+    font-size: 0.78rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .btn-primary {
+    width: 100%;
+  }
+
+  .logo {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .nav nav {
+    gap: 0.55rem;
+  }
+
+  nav a {
+    font-size: 0.82rem;
   }
 }
